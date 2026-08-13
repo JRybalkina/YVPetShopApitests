@@ -15,7 +15,7 @@ echo "Cleaning previous builds..."
 ./gradlew clean
 
 echo "Running tests..."
-./gradlew test
+./gradlew test --stacktrace --info
 
 echo "Build completed successfully!"
 echo "Allure results saved to: allure-results/"
