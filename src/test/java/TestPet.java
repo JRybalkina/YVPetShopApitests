@@ -33,7 +33,9 @@ public class TestPet {
                     "Код ответа не совпал с ожидаемым. Ответ: " + responseBody);
         });
 
-        assertEquals("Pet deleted", responseBody,
-                "Текст ошибки не совпал с ожидаемым ответом. Получен: " + responseBody);
+        step("Проверить, что текст ответа 'Pet deleted'", () -> {
+            assertEquals("Pet deleted", responseBody,
+                    "Текст ошибки не совпал с ожидаемым ответом. Получен: " + responseBody);
+        });
     }
 }
